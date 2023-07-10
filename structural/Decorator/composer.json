@@ -1,0 +1,10 @@
+{
+    "name": "haydar/decorator",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "src\\": "src/"
+        }
+    },
+    "require": {}
+}
