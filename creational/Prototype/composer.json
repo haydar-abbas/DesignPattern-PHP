@@ -1,0 +1,9 @@
+{
+    "name": "haydar/prototype",
+    "autoload": {
+        "psr-4": {
+            "src\\": "src/"
+        }
+    },
+    "require": {}
+}
