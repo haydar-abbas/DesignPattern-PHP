@@ -1,0 +1,9 @@
+{
+    "name": "haydar/strategy",
+    "autoload": {
+        "psr-4": {
+            "src\\": "src/"
+        }
+    },
+    "require": {}
+}
