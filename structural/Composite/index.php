@@ -15,10 +15,10 @@ $ph = new src\Composite("Peri");
 
 $mb->add($cpu);
 $mb->add($ram);
-$cabinet->add($mb);
-$cabinet->add($hdd);
 $ph->add($monitor);
 $ph->add($mouse);
+$cabinet->add($mb);
+$cabinet->add($hdd);
 $computer->add($cabinet);
 $computer->add($ph);
 
