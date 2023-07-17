@@ -12,7 +12,7 @@ class Composite implements Component {
         $this->components = new \ArrayObject();
     }
 
-    public function add($component): void {
+    public function add(Component $component): void {
         $this->components->append($component);
     }
 
