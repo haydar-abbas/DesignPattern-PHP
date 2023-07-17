@@ -1,0 +1,10 @@
+{
+    "name": "haydar/composite",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "src\\": "src/"
+        }
+    },
+    "require": {}
+}
