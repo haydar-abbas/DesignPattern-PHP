@@ -2,7 +2,7 @@
 
 namespace src;
 
-class BankB implements IBank {
+class BankB implements IFlyBank {
     
     public function createAccountBank() {
         echo "From bank B!\n";

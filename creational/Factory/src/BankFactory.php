@@ -4,9 +4,9 @@ namespace src;
 
 class BankFactory {
     
-    private static ?IBank $bank;
+    private static ?IFlyBank $bank;
 
-    public static function getBank(string $bankcode): ?IBank {
+    public static function getBank(string $bankcode): ?IFlyBank {
         
         switch ($bankcode) {
             case '111':
