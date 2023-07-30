@@ -4,28 +4,25 @@ namespace src;
 
 class FlyBankFactory {
 
-    private $banks = array();
+    private $banks = [];
 
     public function getBank($bankCode): ?IFlyBank {
-        $newBank = \null;
+        
         if (key_exists($bankCode, $this->banks)) {
-            $newBank = $this->banks[$bankCode];
-            return $newBank;
+            return $this->banks[$bankCode];
         }
+        
         switch ($bankCode) {
             case "111":
-                $newBank = new BankA();
-                $this->banks[$bankCode] = $newBank;
+                $this->banks[$bankCode] = new BankA();
                 break;
             case "123":
-                $newBank = new BankB();
-                $this->banks[$bankCode] = $newBank;
+                $this->banks[$bankCode] = new BankB();
                 break;
             default:
-                $newBank = null;
-                break;
+                return null;
         }
-        return $newBank;
+        return $this->banks[$bankCode];
     }
 
 }
