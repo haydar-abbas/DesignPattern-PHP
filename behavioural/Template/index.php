@@ -1,6 +1,6 @@
 <?php
 
-require_once './vendor/autoload.php';
+require_once 'vendor/autoload.php';
 
 $car = new src\Car();
 $car->buildVehicle();
