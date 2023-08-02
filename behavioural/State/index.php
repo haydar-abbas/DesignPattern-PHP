@@ -1,9 +1,13 @@
 <?php
 
-require_once './vendor/autoload.php';
+use src\MobileContext;
+use src\Ringing;
+use src\Silent;
 
-$phone = new src\MobileContext(new \src\Ringing());
+require_once 'vendor/autoload.php';
+
+$phone = new MobileContext(new Ringing());
 $phone->alert();
 
-$phone->setState(new \src\Silent());
+$phone->setState(new Silent());
 $phone->alert();
