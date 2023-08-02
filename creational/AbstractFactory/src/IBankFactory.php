@@ -2,8 +2,11 @@
 
 namespace src;
 
-interface IBankFactory {
-    
-    function getBank(string $bankcode): ?banks\IBank;
-    function getPaymentCard(string $cardNumber): ?paymentCards\IPaymentCard;
+use src\banks\IBank;
+use src\paymentCards\IPaymentCard;
+
+interface IBankFactory
+{
+    function getBank(string $bankcode): ?IBank;
+    function getPaymentCard(string $cardNumber): ?IPaymentCard;
 }

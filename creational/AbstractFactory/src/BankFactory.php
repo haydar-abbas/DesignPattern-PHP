@@ -2,19 +2,27 @@
 
 namespace src;
 
-class BankFactory implements IBankFactory {
+use src\banks\BankA;
+use src\banks\BankB;
+use src\banks\IBank;
+use src\paymentCards\IPaymentCard;
+use src\paymentCards\MasterCard;
+use src\paymentCards\VisaCard;
 
-    private ?banks\IBank $bank;
-    private ?paymentCards\IPaymentCard $paymentCard;
+class BankFactory implements IBankFactory
+{
+    private ?IBank $bank;
+    private ?IPaymentCard $paymentCard;
 
-    public function getBank(string $bankcode): ?banks\IBank {
+    public function getBank(string $bankcode): ?IBank
+    {
 
         switch ($bankcode) {
             case '111':
-                $this->bank = new banks\BankA();
+                $this->bank = new BankA();
                 break;
             case '123':
-                $this->bank = new banks\BankB();
+                $this->bank = new BankB();
                 break;
             default:
                 $this->bank = null;
@@ -24,14 +32,15 @@ class BankFactory implements IBankFactory {
         return $this->bank;
     }
 
-    public function getPaymentCard(string $cardNumber): ?paymentCards\IPaymentCard {
-        
+    public function getPaymentCard(string $cardNumber): ?IPaymentCard
+    {
+
         switch ($cardNumber) {
             case '11':
-                $this->paymentCard = new paymentCards\VisaCard();
+                $this->paymentCard = new VisaCard();
                 break;
             case '12':
-                $this->paymentCard = new paymentCards\MasterCard();
+                $this->paymentCard = new MasterCard();
                 break;
             default:
                 $this->paymentCard = null;
@@ -40,5 +49,4 @@ class BankFactory implements IBankFactory {
 
         return $this->paymentCard;
     }
-
 }
