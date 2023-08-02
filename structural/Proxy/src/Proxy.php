@@ -2,23 +2,23 @@
 
 namespace src;
 
-class Proxy implements ISP {
-
+class Proxy implements ISP
+{
     private $blockedSites = ['facebook', 'tiktok'];
     private ISP $isp;
 
-    public function __construct(ISP $isp) {
+    public function __construct(ISP $isp)
+    {
         $this->isp = $isp;
     }
 
-    public function serveSite(String $domain) {
-        
+    public function serveSite(String $domain): string
+    {
         echo "[" . date('Y-m-d h:i:s') . "] -> $domain Requested \n";
 
         if (in_array($domain, $this->blockedSites)) {
-            return "This site is bloked!";
+            return "This site is bloked!\n";
         }
         return $this->isp->serveSite($domain);
     }
-
 }

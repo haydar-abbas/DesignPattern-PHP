@@ -2,10 +2,10 @@
 
 namespace src;
 
-class Zain implements ISP {
-
-    public function serveSite(String $domain) {
-        return "https://$domain.com";
+class Zain implements ISP
+{
+    public function serveSite(String $domain): string
+    {
+        return "https://$domain.com\n";
     }
-
 }
