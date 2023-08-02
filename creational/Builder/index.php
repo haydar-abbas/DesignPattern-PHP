@@ -1,15 +1,17 @@
 <?php
 
+use src\Robot;
+use src\RobotEngineer;
+
 require 'vendor/autoload.php';
 
-$robotEngineer = new \src\RobotEngineer(new src\Robot());
+$robotEngineer = new RobotEngineer(new Robot());
 $robotEngineer->makeRobot();
 
 $newRobot = $robotEngineer->getRobot();
 
 echo "Robot Built...\n";
-echo "Robot Head type: " . $newRobot->getRobotHead();
-echo "Robot Torso type: " . $newRobot->getRobotTorso();
-echo "Robot Arms type: " . $newRobot->getRobotArms();
-echo "Robot Legs type: " . $newRobot->getRobotLegs();
-    
+printf("Robot Head type: %s", $newRobot->getRobotHead());
+printf("Robot Torso type: %s", $newRobot->getRobotTorso());
+printf("Robot Arms type: %s", $newRobot->getRobotArms());
+printf("Robot Legs type: %s", $newRobot->getRobotLegs());
