@@ -2,7 +2,7 @@
 
 namespace src;
 
-interface IFlyBank {
-    
+interface IFlyBank
+{
     function createBank(): string;
 }
