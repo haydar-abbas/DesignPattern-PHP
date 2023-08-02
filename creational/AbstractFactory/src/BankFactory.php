@@ -11,42 +11,27 @@ use src\paymentCards\VisaCard;
 
 class BankFactory implements IBankFactory
 {
-    private ?IBank $bank;
-    private ?IPaymentCard $paymentCard;
-
     public function getBank(string $bankcode): ?IBank
     {
-
         switch ($bankcode) {
             case '111':
-                $this->bank = new BankA();
-                break;
+                return new BankA;
             case '123':
-                $this->bank = new BankB();
-                break;
+                return new BankB;
             default:
-                $this->bank = null;
-                break;
+                return null;
         }
-
-        return $this->bank;
     }
 
     public function getPaymentCard(string $cardNumber): ?IPaymentCard
     {
-
         switch ($cardNumber) {
             case '11':
-                $this->paymentCard = new VisaCard();
-                break;
+                return new VisaCard;
             case '12':
-                $this->paymentCard = new MasterCard();
-                break;
+                return new MasterCard;
             default:
-                $this->paymentCard = null;
-                break;
+                return null;
         }
-
-        return $this->paymentCard;
     }
 }
