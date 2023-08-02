@@ -1,12 +1,16 @@
 <?php
 
-require_once './vendor/autoload.php';
+use src\FlyBehavior\FlyNoFly;
+use src\FlyBehavior\FlyWithRocket;
+use src\NormalDuck;
 
-$duck = new src\NormalDuck("Lolo");
+require_once 'vendor/autoload.php';
+
+$duck = new NormalDuck("Lolo");
 echo $duck->fly();
 
-$duck->setFlyBehavior(new src\FlyBehavior\FlyWithRocket());
+$duck->setFlyBehavior(new FlyWithRocket());
 echo $duck->fly();
 
-$duck->setFlyBehavior(new \src\FlyBehavior\FlyNoFly());
+$duck->setFlyBehavior(new FlyNoFly());
 echo $duck->fly();
