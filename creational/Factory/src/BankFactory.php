@@ -2,12 +2,13 @@
 
 namespace src;
 
-class BankFactory {
-    
-    private static ?IFlyBank $bank;
+class BankFactory
+{
+    private static ?IBank $bank;
 
-    public static function getBank(string $bankcode): ?IFlyBank {
-        
+    public static function getBank(string $bankcode): ?IBank
+    {
+
         switch ($bankcode) {
             case '111':
                 self::$bank = new BankA();
@@ -22,5 +23,4 @@ class BankFactory {
 
         return self::$bank;
     }
-
 }
