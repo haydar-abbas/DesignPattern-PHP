@@ -1,12 +1,15 @@
 <?php
 
-require_once './vendor/autoload.php';
+use src\Course;
+use src\Student;
 
-$person1 = new src\Student("Haydar");
-$person2 = new src\Student("Abbas");
-$person3 = new src\Student("Ali");
+require_once 'vendor/autoload.php';
 
-$subject = new \src\Course("Math");
+$person1 = new Student("Haydar");
+$person2 = new Student("Abbas");
+$person3 = new Student("Ali");
+
+$subject = new Course("Math");
 $subject->addObserver($person1);
 $subject->addObserver($person2);
 $subject->addObserver($person3);
