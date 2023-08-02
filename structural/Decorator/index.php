@@ -3,17 +3,17 @@
 require_once 'vendor/autoload.php';
 
 $sandwich = new \src\BasicSandwich();
-echo "Description: " . $sandwich->getDescription() . "\n";
-echo "Cost: " .$sandwich->getCost() . "\n";
+printf("Description: %s\n", $sandwich->getDescription());
+printf("Cost: %.1f\n", $sandwich->getCost());
 
 $sandwich = new src\Beef($sandwich);
-echo "Description: " . $sandwich->getDescription() . "\n";
-echo "Cost: " .$sandwich->getCost() . "\n";
+printf("Description: %s\n", $sandwich->getDescription());
+printf("Cost: %.1f\n", $sandwich->getCost());
 
 $sandwich = new \src\Chees($sandwich);
-echo "Description: " . $sandwich->getDescription() . "\n";
-echo "Cost: " .$sandwich->getCost() . "\n";
+printf("Description: %s\n", $sandwich->getDescription());
+printf("Cost: %.1f\n", $sandwich->getCost());
 
 $sandwich = new \src\Salt($sandwich);
-echo "Description: " . $sandwich->getDescription() . "\n";
-echo "Cost: " .$sandwich->getCost() . "\n";
+printf("Description: %s\n", $sandwich->getDescription());
+printf("Cost: %.1f\n", $sandwich->getCost());
