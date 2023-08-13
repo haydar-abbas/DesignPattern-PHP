@@ -4,25 +4,24 @@ namespace src;
 
 class Remote {
 
-    private $on_command;
-    private $off_command;
-    
+    private array $on_command;
+    private array $off_command;
+
     public function __construct() {
-        $this->on_command = array();
-        $this->off_command = array();
+        $this->on_command = [];
+        $this->off_command = [];
     }
 
-        public function addCommand(int $slot, ICommand $on, ICommand $off) {
+    public function addCommand(int $slot, ICommand $on, ICommand $off): void {
         $this->on_command[$slot] = $on;
         $this->off_command[$slot] = $off;
     }
 
-    function onBtnPress(int $slot) {
+    public function onBtnPress(int $slot): void {
         $this->on_command[$slot]->execute();
     }
 
-    function offBtnPress(int $slot) {
+    public function offBtnPress(int $slot): void {
         $this->off_command[$slot]->execute();
     }
-
 }

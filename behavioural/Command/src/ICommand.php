@@ -4,5 +4,5 @@ namespace src;
 
 interface ICommand {
 
-    function execute();
+    function execute(): void;
 }

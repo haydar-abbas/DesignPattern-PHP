@@ -10,7 +10,7 @@ class TurnOFF implements ICommand {
         $this->electrical = $electrical;
     }
 
-    public function execute() {
+    public function execute(): void {
         $this->electrical->off();
     }
 
