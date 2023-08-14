@@ -1,0 +1,15 @@
+{
+    "name": "haydar/facade",
+    "autoload": {
+        "psr-4": {
+            "src\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "haydar-abbas",
+            "email": "haydarabbas40@proton.me"
+        }
+    ],
+    "require": {}
+}
