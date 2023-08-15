@@ -23,5 +23,4 @@ class AmericanRestaurant extends Restaurant
     {
         $this->pizza->setCrust("thick");
     }
-    
 }

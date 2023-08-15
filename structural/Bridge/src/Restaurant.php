@@ -17,7 +17,6 @@ abstract class Restaurant
         $this->addingToppings();
         $this->pizza->assemble();
         $this->pizza->qualityCheck();
-        echo "Order in progress!\n";
+        echo "Order in progress...!\n";
     }
-
 }

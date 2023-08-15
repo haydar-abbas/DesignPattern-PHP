@@ -16,5 +16,4 @@ class VeggiePizza extends Pizza
     {
         printf("Crust is: %s\n", $this->crust);
     }
-
 }

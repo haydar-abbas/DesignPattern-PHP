@@ -2,8 +2,8 @@
 
 namespace src;
 
-abstract class Pizza {
-
+abstract class Pizza
+{
     protected string $sauce;
     protected string $toppings;
     protected string $crust;
@@ -25,5 +25,4 @@ abstract class Pizza {
     {
         $this->crust = $crust;
     }
-    
 }
