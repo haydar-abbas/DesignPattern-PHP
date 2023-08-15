@@ -9,17 +9,17 @@ class ItalianRestaurant extends Restaurant
         parent::__construct($pizza);
     }
 
-    public function addingSauce(): void
+    protected function addingSauce(): void
     {
         $this->pizza->setSauce("Oil");
     }
 
-    public function addingToppings(): void
+    protected function addingToppings(): void
     {
         $this->pizza->setToppings("null");
     }
 
-    public function makeCrust(): void
+    protected function makeCrust(): void
     {
         $this->pizza->setCrust("Thin");
     }
