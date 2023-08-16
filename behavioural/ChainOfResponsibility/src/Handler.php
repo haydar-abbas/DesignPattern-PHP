@@ -4,7 +4,7 @@ namespace src;
 
 abstract class Handler
 {
-    private $next;
+    private ?Handler $next = null;
 
     public function setNextHandler(Handler $next): Handler
     {
