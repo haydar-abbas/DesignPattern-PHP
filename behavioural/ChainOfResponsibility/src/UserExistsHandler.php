@@ -10,7 +10,7 @@ class UserExistsHandler extends Handler
     {
         if (!$this->db->isValidUser($username)) {
             echo "This user is not registered!\n";
-            echo "Sign up to out app now.\n";
+            echo "Sign up to our app now.\n";
             return false;
         }
         return $this->handleNext($username, $passwd);
