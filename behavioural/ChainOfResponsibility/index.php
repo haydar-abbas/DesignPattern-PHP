@@ -2,16 +2,15 @@
 
 require_once 'vendor/autoload.php';
 
-use src\AuthService;
-use src\DataBase;
-use src\RoleCheckHandler;
-use src\UserExistsHandler;
-use src\ValidPasswordHandler;
 
-$database = new DataBase;
-$handler = new UserExistsHandler($database);
-$handler->setNextHandler(new ValidPasswordHandler($database));
-$handler->setNextHandler(new RoleCheckHandler);
-$service = new AuthService($handler);
-$service->logIn("Haydar", "admin");
-$service->logIn("Abbas", "user");
+$calc1 = new src\AddNumbers;
+$calc2 = new src\SubtractNumbers;
+$calc3 = new src\MultNumbers;
+$calc4 = new src\DivideNumbers;
+
+$calc1->setNextChain($calc2);
+$calc2->setNextChain($calc3);
+$calc3->setNextChain($calc4);
+
+$request = new src\Numbers(4, 2, '+');
+$calc1->calculate($request);
