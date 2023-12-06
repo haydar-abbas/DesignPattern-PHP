@@ -2,7 +2,7 @@
 
 namespace src;
 
-class Human implements IPrototype
+class Human implements Prototype
 {
     private string $name;
     private int $age;

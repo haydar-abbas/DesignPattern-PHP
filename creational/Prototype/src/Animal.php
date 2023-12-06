@@ -2,7 +2,7 @@
 
 namespace src;
 
-class Animal implements IPrototype {
+class Animal implements Prototype {
     
     private $name;
     private $type;

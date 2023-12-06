@@ -2,7 +2,7 @@
 
 namespace src;
 
-interface IPrototype {
+interface Prototype {
 
     function createClone();
 }
