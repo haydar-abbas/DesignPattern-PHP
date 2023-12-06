@@ -2,7 +2,7 @@
 
 namespace src;
 
-class BankA implements IBank
+class BankA implements Bank
 {
     public function createAccountBank()
     {

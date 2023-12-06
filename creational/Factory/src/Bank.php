@@ -2,7 +2,7 @@
 
 namespace src;
 
-interface IBank {
+interface Bank {
     
     public function createAccountBank();
 }

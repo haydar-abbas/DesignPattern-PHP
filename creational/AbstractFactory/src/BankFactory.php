@@ -11,7 +11,7 @@ use src\paymentCards\VisaCard;
 
 class BankFactory implements IBankFactory
 {
-    public function getBank(string $bankcode): ?IBank
+    public function getBank(string $bankcode): ?Bank
     {
         switch ($bankcode) {
             case '111':

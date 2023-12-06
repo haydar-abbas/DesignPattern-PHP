@@ -7,6 +7,6 @@ use src\paymentCards\IPaymentCard;
 
 interface IBankFactory
 {
-    function getBank(string $bankcode): ?IBank;
+    function getBank(string $bankcode): ?Bank;
     function getPaymentCard(string $cardNumber): ?IPaymentCard;
 }
