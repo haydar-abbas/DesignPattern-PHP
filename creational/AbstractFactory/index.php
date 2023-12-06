@@ -1,10 +1,10 @@
 <?php
 
-use src\BankFactory;
+use src\BankFactoryImp;
 
 require 'vendor/autoload.php';
 
-$bankFactory = new BankFactory();
+$bankFactory = new BankFactoryImp();
 $bank = $bankFactory->getBank('111');
 $paymentCard = $bankFactory->getPaymentCard("12");
 

@@ -2,7 +2,7 @@
 
 namespace src\paymentCards;
 
-interface IPaymentCard {
+interface PaymentCard {
     
     function getPaymentCard(): string;
 }

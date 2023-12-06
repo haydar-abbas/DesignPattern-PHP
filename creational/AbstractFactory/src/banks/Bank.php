@@ -2,7 +2,7 @@
 
 namespace src\banks;
 
-interface IBank {
+interface Bank {
     
     function createAccountBank(): string;
 }

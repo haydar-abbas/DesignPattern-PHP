@@ -2,7 +2,7 @@
 
 namespace src\paymentCards;
 
-class VisaCard implements IPaymentCard {
+class VisaCard implements PaymentCard {
     
     public function getPaymentCard(): string {
         return "VisaCard!\n";

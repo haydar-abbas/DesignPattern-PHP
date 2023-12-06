@@ -2,7 +2,7 @@
 
 namespace src;
 
-class BankFactory
+class BankFactoryImp
 {
     private static ?Bank $bank;
 

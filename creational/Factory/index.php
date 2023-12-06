@@ -1,11 +1,11 @@
 <?php
 
-use src\BankFactory;
+use src\BankFactoryImp;
 
 require 'vendor/autoload.php';
 
 
-$bank = BankFactory::getBank('123');
+$bank = BankFactoryImp::getBank('123');
 
 if ($bank == null) {
     die("The card number is ivalid!!\n");
