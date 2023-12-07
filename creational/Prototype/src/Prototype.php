@@ -4,5 +4,5 @@ namespace src;
 
 interface Prototype {
 
-    function createClone();
+    function createClone(): Prototype;
 }

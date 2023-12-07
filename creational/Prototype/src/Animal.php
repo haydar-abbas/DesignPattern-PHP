@@ -3,15 +3,14 @@
 namespace src;
 
 class Animal implements Prototype {
-    
-    private $name;
-    private $type;
-    
-    public function __construct($name, $type) {
-        $this->name = $name;
-        $this->type = $type;
+
+    public function __construct(
+            private string $name,
+            private string $type
+    ) {
+        
     }
-    
+
     public function setName($name): void {
         $this->name = $name;
     }
@@ -20,8 +19,7 @@ class Animal implements Prototype {
         $this->type = $type;
     }
 
-    public function createClone() {
+    public function createClone(): Prototype {
         return new Animal($this->name, $this->type);
     }
-
 }
