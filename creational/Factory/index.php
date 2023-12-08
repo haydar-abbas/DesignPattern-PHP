@@ -1,14 +1,13 @@
 <?php
 
-use src\BankFactoryImp;
+use src\BankFactory;
 
 require 'vendor/autoload.php';
 
-
-$bank = BankFactoryImp::getBank('123');
+$bank = BankFactory::getBank('123');
 
 if ($bank == null) {
-    die("The card number is ivalid!!\n");
+    die("The card number is invalid!!\n");
 }
 
 $bank->createAccountBank();

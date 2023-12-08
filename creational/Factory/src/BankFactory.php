@@ -2,12 +2,11 @@
 
 namespace src;
 
-class BankFactoryImp
-{
+class BankFactory {
+
     private static ?Bank $bank;
 
-    public static function getBank(string $bankcode): ?Bank
-    {
+    public static function getBank(string $bankcode): ?Bank {
 
         switch ($bankcode) {
             case '111':

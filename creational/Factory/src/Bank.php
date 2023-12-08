@@ -3,6 +3,6 @@
 namespace src;
 
 interface Bank {
-    
-    public function createAccountBank();
+
+    function createAccountBank();
 }
