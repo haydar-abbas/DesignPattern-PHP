@@ -1,19 +1,24 @@
 <?php
 
-use src\BankFactoryImp;
-
 require 'vendor/autoload.php';
 
-$bankFactory = new BankFactoryImp();
-$bank = $bankFactory->getBank('111');
-$paymentCard = $bankFactory->getPaymentCard("12");
+use src\EuropeFinancialToolsFactory;
+use src\CanadaFinancialToolsFactory;
+use src\OrderProcessor;
+use src\Customer;
+use src\Order;
 
-if ($bank == null) {
-    die("The Bank number is ivalid!!\n");
+$countryCode = "CAq";
+$customer = new Customer;
+$order = new Order;
+$orderProcessor = null;
+$factory = null;
+
+if ($countryCode == "EU") {
+    $factory = new EuropeFinancialToolsFactory;
+} else if ($countryCode == "CA") {
+    $factory = new CanadaFinancialToolsFactory;
 }
-if ($paymentCard == null) {
-    die("The Card number is ivalid!!\n");
-}
-var_dump($bank, $paymentCard);
-echo $bank->createAccountBank();
-echo $paymentCard->getPaymentCard();
+
+$orderProcessor = new OrderProcessor($factory);
+$orderProcessor->processOrder($order);
