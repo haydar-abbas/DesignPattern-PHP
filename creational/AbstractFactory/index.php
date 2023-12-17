@@ -8,10 +8,9 @@ use src\OrderProcessor;
 use src\Customer;
 use src\Order;
 
-$countryCode = "CAq";
+$countryCode = "CA";
 $customer = new Customer;
 $order = new Order;
-$orderProcessor = null;
 $factory = null;
 
 if ($countryCode == "EU") {
