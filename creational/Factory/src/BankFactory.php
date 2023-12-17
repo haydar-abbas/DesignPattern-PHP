@@ -4,22 +4,13 @@ namespace src;
 
 class BankFactory {
 
-    private static ?Bank $bank;
+    public static function getBank(string $bankcode): Bank {
 
-    public static function getBank(string $bankcode): ?Bank {
+        $array_banks = [
+            '111' => new BankA,
+            '123' => new BankB
+        ];
 
-        switch ($bankcode) {
-            case '111':
-                self::$bank = new BankA();
-                break;
-            case '123':
-                self::$bank = new BankB();
-                break;
-            default:
-                self::$bank = null;
-                break;
-        }
-
-        return self::$bank;
+        return $array_banks[$bankcode] ?? throw new \Exception("The card number is invalid!!\n");
     }
 }
