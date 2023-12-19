@@ -4,10 +4,11 @@ namespace src;
 
 class RobotBuilder {
 
-    private Robot $robot;
-
-    public function __construct(Robot $robot) {
-        $this->robot = $robot;
+    public function __construct(private Robot $robot) {
+        $this->buildRobotHead();
+        $this->buildRobotTorso();
+        $this->buildRobotArms();
+        $this->buildRobotLegs();
     }
 
     public function buildRobotHead(): void {
@@ -29,5 +30,4 @@ class RobotBuilder {
     public function getRobot(): Robot {
         return $this->robot;
     }
-
 }
