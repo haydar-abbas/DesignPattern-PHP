@@ -5,19 +5,19 @@ require 'vendor/autoload.php';
 use src\EuropeFinancialToolsFactory;
 use src\CanadaFinancialToolsFactory;
 use src\OrderProcessor;
-use src\Customer;
 use src\Order;
 
-$countryCode = "CA";
-$customer = new Customer;
+$countryCode = "EU";
 $order = new Order;
-$factory = null;
-
-if ($countryCode == "EU") {
-    $factory = new EuropeFinancialToolsFactory;
-} else if ($countryCode == "CA") {
-    $factory = new CanadaFinancialToolsFactory;
+$factory = [
+    "EU" => new EuropeFinancialToolsFactory,
+    "CA" => new CanadaFinancialToolsFactory
+];
+try {
+    $orderProcessor = new OrderProcessor(
+            $factory[$countryCode] ?? throw new \Exception("The country in not define")
+    );
+    $orderProcessor->processOrder($order);
+} catch (Exception $exc) {
+    echo $exc->getMessage();
 }
-
-$orderProcessor = new OrderProcessor($factory);
-$orderProcessor->processOrder($order);
