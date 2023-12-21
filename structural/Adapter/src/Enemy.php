@@ -2,8 +2,9 @@
 
 namespace src;
 
-interface IEnemy {
-    
+interface Enemy {
+
     function fireCannons();
+
     function reFillBanzeen();
 }

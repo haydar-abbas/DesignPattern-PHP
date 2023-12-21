@@ -2,13 +2,10 @@
 
 namespace src;
 
+class SoldirAdaptor implements Enemy {
 
-class SoldirAdaptor implements IEnemy {
-    
-    private Soldir $soldir;
-    
-    public function __construct(Soldir $soldir) {
-        $this->soldir = $soldir;
+    public function __construct(private Soldir $soldir) {
+        
     }
 
     public function fireCannons() {
@@ -18,5 +15,4 @@ class SoldirAdaptor implements IEnemy {
     public function reFillBanzeen() {
         $this->soldir->soldirEating();
     }
-
 }

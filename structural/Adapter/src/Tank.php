@@ -2,10 +2,8 @@
 
 namespace src;
 
+class Tank implements Enemy {
 
-class Tank implements IEnemy {
-    
-    
     public function fireCannons() {
         echo "Tank fire cannon!\n";
     }
@@ -13,5 +11,4 @@ class Tank implements IEnemy {
     public function reFillBanzeen() {
         echo "Tank refill banzeen!\n";
     }
-
 }

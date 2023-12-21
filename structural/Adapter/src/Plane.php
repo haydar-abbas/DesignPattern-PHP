@@ -2,9 +2,8 @@
 
 namespace src;
 
-class Plane implements IEnemy {
-    
-    
+class Plane implements Enemy {
+
     public function fireCannons() {
         echo "Plane fire cannon!\n";
     }
@@ -12,5 +11,4 @@ class Plane implements IEnemy {
     public function reFillBanzeen() {
         echo "Plane refill banzeen!\n";
     }
-
 }
